@@ -1,0 +1,207 @@
+/* 🌿 Lukhanyiso's Organic Glam - Gold & White Organic Theme */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #fdfbf7;
+    color: #4a3c2b;
+    background-image: url('../images/beige-bg.jpg'); /* 🌸 Add a soft beige background */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 60px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    width: 110px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a3c2b;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #c5a449; /* soft gold */
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: 
+        linear-gradient(to bottom right, rgba(255, 245, 220, 0.8), rgba(255, 255, 255, 0.9)),
+        url('../images/natural-bg.jpg') center/cover no-repeat;
+    color: #4a3c2b;
+    border-bottom: 2px solid #f0e2c0;
+    animation: fadeIn 1.5s ease-in-out;
+    box-shadow: inset 0 0 60px rgba(183, 147, 64, 0.25); /* 🌟 gold glow */
+}
+
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: #b79340;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #4a3c2b;
+}
+
+.btn {
+    background-color: #b79340;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #d4b360;
+    transform: scale(1.05);
+}
+
+/* Featured Section */
+.featured {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: rgba(255,255,255,0.9);
+    animation: fadeUp 1.2s ease-in-out;
+}
+
+.featured h2 {
+    color: #4a3c2b;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 1.5s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 50%; /* 🌸 Rounded image for soft organic feel */
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    color: #b79340;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #f7f4ec;
+    text-align: center;
+    padding: 25px;
+    color: #4a3c2b;
+    font-size: 0.9rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer a {
+    color: #b79340;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ✨ Soft Scroll Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌿 Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 85%;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+}
